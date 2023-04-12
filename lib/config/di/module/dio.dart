@@ -38,10 +38,10 @@ class AppInterceptor extends Interceptor {
 
     if (connection) {
       options.baseUrl = EndPoints.baseUrl;
-      options.sendTimeout = const Duration(seconds: 30);
-      options.connectTimeout = const Duration(seconds: 10);
+      options.sendTimeout = const Duration(seconds: 10);
+      options.connectTimeout = const Duration(seconds: 5);
       options.contentType = AppStrings.applicationJson;
-      options.receiveTimeout = const Duration(seconds: 30);
+      options.receiveTimeout = const Duration(seconds: 15);
       options.responseType = ResponseType.json;
       options.receiveDataWhenStatusError = true;
       options.followRedirects = false;
