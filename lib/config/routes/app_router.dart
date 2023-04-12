@@ -1,8 +1,8 @@
+import 'package:amana_task/config/routes/app_routes.dart';
+import 'package:amana_task/core/utils/app_strings.dart';
 import 'package:amana_task/features/auth/presentation/pages/login_page.dart';
 import 'package:amana_task/features/home.dart';
 import 'package:flutter/material.dart';
-import 'package:amana_task/config/routes/app_routes.dart';
-import 'package:amana_task/core/utils/app_strings.dart';
 
 class AppRouter {
   static Route? onGenerateRoute(RouteSettings settings) {

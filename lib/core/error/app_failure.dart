@@ -1,30 +1,18 @@
-import 'package:equatable/equatable.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-abstract class AppFailure extends Equatable {
-  final String errorMessage;
+part 'app_failure.freezed.dart';
 
-  const AppFailure(this.errorMessage);
+@freezed
+class AppFailure with _$AppFailure {
+  const factory AppFailure.network({required String errorMessage}) =
+      AppNetworkFailure;
 
-  @override
-  List<Object?> get props => [errorMessage];
-}
+  const factory AppFailure.unAuth({required String errorMessage}) =
+      AppUnUthFailure;
 
-class NetworkFailure extends AppFailure {
-  const NetworkFailure(super.errorMessage);
-}
+  const factory AppFailure.notFound({required String errorMessage}) =
+      AppNotFoundFailure;
 
-class UnAuthFailure extends AppFailure {
-  const UnAuthFailure(super.errorMessage);
-}
-
-class IncorrectInputFailure extends AppFailure {
-  const IncorrectInputFailure(super.errorMessage);
-}
-
-class UnKnownFailure extends AppFailure {
-  const UnKnownFailure(super.errorMessage);
-}
-
-class NotFoundFailure extends AppFailure {
-  const NotFoundFailure(super.errorMessage);
+  const factory AppFailure.unknown({required String errorMessage}) =
+      AppUnKnownFailure;
 }

@@ -1,10 +1,10 @@
-import 'package:amana_task/features/auth/domain/usecases/get_current_user_use_case.dart';
-import 'package:email_validator/email_validator.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:amana_task/core/utils/app_strings.dart';
 import 'package:amana_task/features/auth/domain/entities/user.dart';
+import 'package:amana_task/features/auth/domain/usecases/get_current_user_use_case.dart';
 import 'package:amana_task/features/auth/domain/usecases/login_use_case.dart';
 import 'package:amana_task/features/auth/presentation/cubit/auth_cubit/auth_states.dart';
+import 'package:email_validator/email_validator.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
 
 @injectable
