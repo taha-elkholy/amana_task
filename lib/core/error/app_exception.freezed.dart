@@ -17,7 +17,6 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$AppException {
   String? get errorMessage => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String? errorMessage) network,
@@ -26,7 +25,6 @@ mixin _$AppException {
     required TResult Function(String? errorMessage) unknown,
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String? errorMessage)? network,
@@ -44,7 +42,6 @@ mixin _$AppException {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(AppNetworkException value) network,
@@ -53,7 +50,6 @@ mixin _$AppException {
     required TResult Function(AppUnKnownException value) unknown,
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AppNetworkException value)? network,
@@ -91,9 +87,9 @@ class _$AppExceptionCopyWithImpl<$Res, $Val extends AppException>
     implements $AppExceptionCopyWith<$Res> {
   _$AppExceptionCopyWithImpl(this._value, this._then);
 
-// ignore: unused_field
+  // ignore: unused_field
   final $Val _value;
-// ignore: unused_field
+  // ignore: unused_field
   final $Res Function($Val) _then;
 
   @pragma('vm:prefer-inline')
